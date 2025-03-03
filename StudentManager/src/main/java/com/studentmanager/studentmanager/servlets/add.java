@@ -55,7 +55,7 @@ public class add extends HttpServlet {
             if (rowsInserted > 0) {
                 out.println("<h3>Student record saved successfully!</h3>");
             } else {
-                
+
                 out.println("<h3>Failed to save student record.</h3>");
             }
         } catch (Exception e) {
