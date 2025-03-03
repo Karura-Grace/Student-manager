@@ -90,11 +90,35 @@
     </div>
     <div class="content">
         <h1>Results Management</h1>
-        <div class="card">
-            <h3>Add Results</h3>
-            <p>Enter and update exam scores for students.</p>
+       <div class="card">
+            <h3>Add  student Results</h3>
+            <p> <b>Enter and update exam scores for students</B>.</p>
+            <form  class="card" action="add" method="post">
+ <label for=" student id">Student ID: </label>
+ 
+ <input type="text" name="id"  placeholder=" Enter StudentID"required><br> </br>
+ <label for="student name" >Student name: </label>
+ 
+ <input type="Text" name="name"  placeholder="Enter name"required><br></Br>                 
+ <label for="student score">score: </label>
+ 
+ <input type="number" name="score" placeholder="Enter score"> <br></br>
+ <input type="submit">
+  </form>
+   <%
+     String message = (String) request.getAttribute("message"); 
+            
+            if (message!=null)
+            {
+            %>
+           
+            <p> <%=message%></p>
+          <%
+            }
+            %>
         </div>
-        <div class="card">
+            
+            <div class="card">
             <h3>Results Overview</h3>
             <p>View student performance and generate reports.</p>
         </div>
@@ -102,4 +126,3 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
